@@ -1,7 +1,6 @@
 /* עיצוב מחשבון הצעת המחיר בצבע התכלת של הלוגו */
 .calculator-section {
   padding: 85px 20px;
-  /* background: linear-gradient(155deg, #65B3E4 0%, #4FA4DC 50%, #3B92CE 100%); */
   color: #ffffff;
   border-top: 2px solid rgba(255, 255, 255, 0.25);
   border-bottom: 2px solid rgba(255, 255, 255, 0.25);
