@@ -1,0 +1,98 @@
+:root {
+  /* צבע התכלת המדויק מתוך תמונת הלוגו של וקסמן */
+  --color-brand-blue: #65B3E4;          /* תכלת שמיים ראשי מהלוגו */
+  --color-brand-blue-hover: #50A4DC;
+  --color-brand-blue-deep: #2B7FB5;
+  --color-brand-blue-dark: #1E6C9E;
+  --color-brand-blue-light: #EBF5FC;
+  --color-brand-blue-surface: #D8ECF9;
+  --color-brand-blue-glow: rgba(101, 179, 228, 0.45);
+
+  --color-brand-orange: #E9542D;        /* כתום-קורל מקורי מהסלוגן בלוגו */
+  --color-brand-orange-hover: #D4421B;
+  --color-brand-orange-light: #FDF2EE;
+  --color-brand-orange-glow: rgba(233, 84, 45, 0.35);
+
+  --color-brand-dark: #0F3554;          /* כחול ימי עמוק לטקסטים קריאים */
+  --color-brand-surface: #65B3E4;       /* תכלת כמשטח ראשי */
+  --color-brand-surface-light: #7AC2EC;
+
+  --color-brand-bg: #F0F8FD;            /* רקע בהיר ונקי עם גוון תכלת */
+  --color-brand-card: #FFFFFF;
+  --color-text-dark: #0F3554;
+  --color-text-muted: #4A6E8D;
+  --color-border: #C8E3F5;
+
+  --font-main: 'Heebo', sans-serif;
+  --font-heading: 'Rubik', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  direction: rtl;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-brand-bg);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* רקע מעגלים מודפסים מרהיב בצבע התכלת של הלוגו */
+.circuit-pattern {
+  background-color: #65B3E4;
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.3) 2px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 25px 25px, 25px 25px;
+}
+
+.circuit-pattern-subtle {
+  background-color: #55A8DD;
+  background-image: 
+    radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.25) 1.5px, transparent 0),
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px, 20px 20px, 20px 20px;
+}
+
+/* עיצוב פס גלילה מותאם לצבע התכלת */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #EBF5FC;
+}
+::-webkit-scrollbar-thumb {
+  background: #65B3E4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #50A4DC;
+}

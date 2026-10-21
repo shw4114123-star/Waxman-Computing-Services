@@ -1,0 +1,208 @@
+/* עיצוב סרגל עליון Navbar בצבע התכלת של הלוגו */
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #65B3E4;
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(101, 179, 228, 0.35);
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* לוגו ומיתוג */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-image {
+  height: 48px;
+  width: auto;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 3px 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover .brand-logo-image {
+  transform: scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.brand-highlight {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand-orange);
+  text-underline-offset: 3px;
+}
+
+.brand-tagline {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+/* ניווט */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* כפתורי פעולה ימניים */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-phone-call {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: var(--color-brand-blue-deep);
+  font-weight: 900;
+  font-size: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+}
+
+.btn-phone-call:hover {
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.phone-icon {
+  color: var(--color-brand-orange);
+}
+
+.btn-support-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 17px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--color-brand-orange) 0%, #c83d16 100%);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13.5px;
+  box-shadow: 0 4px 14px rgba(233, 84, 45, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-support-nav:hover {
+  background: linear-gradient(135deg, var(--color-brand-orange-hover) 0%, #b8330e 100%);
+  transform: translateY(-1px);
+}
+
+/* מובייל */
+.mobile-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.mobile-menu-drawer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn-phone-call,
+  .btn-support-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .mobile-menu-drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px 24px;
+    background-color: #55A8DD;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .mobile-link {
+    font-size: 15px;
+    color: #ffffff;
+    padding: 8px 0;
+    font-weight: 700;
+  }
+  .mobile-phone-btn,
+  .mobile-support-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .mobile-phone-btn {
+    background-color: #ffffff;
+    color: var(--color-brand-blue-deep);
+  }
+  .mobile-support-btn {
+    background-color: var(--color-brand-orange);
+    color: #ffffff;
+  }
+}

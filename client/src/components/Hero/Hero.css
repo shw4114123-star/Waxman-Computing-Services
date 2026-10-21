@@ -1,0 +1,259 @@
+/* עיצוב אזור ה-Hero בצבע התכלת של הלוגו */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px 85px;
+  background: linear-gradient(155deg, #65B3E4 0%, #4FA4DC 50%, #3B92CE 100%);
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* אלמנט זוהר עדין ברקע */
+.hero-glow-1 {
+  position: absolute;
+  top: -40px;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(233, 84, 45, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* תגית עליונה */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 20px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-brand-orange);
+  box-shadow: 0 0 10px var(--color-brand-orange);
+  animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* כרטיסיית ההנפשה המרכזית ב-Hero */
+.hero-animation-wrapper {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto 34px;
+}
+
+.hero-animation-card {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 5.6 / 1;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(15, 53, 84, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-animation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 55px rgba(15, 53, 84, 0.3);
+}
+
+.hero-animation-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 56.5% 44.5%;
+  display: block;
+}
+
+.hero-seo-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero-description {
+  font-size: 18.5px;
+  color: #F0F8FD;
+  max-width: 700px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+  font-weight: 500;
+  text-shadow: 0 1px 4px rgba(15, 53, 84, 0.15);
+}
+
+/* כפתורי הנעה לפעולה */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.btn-primary-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-brand-orange) 0%, #c83d16 100%);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-primary-hero:hover {
+  background: linear-gradient(135deg, var(--color-brand-orange-hover) 0%, #b8330e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: var(--color-brand-blue-deep);
+  font-size: 16.5px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-hero:hover {
+  background-color: #f8fafc;
+  color: var(--color-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* 3 יתרונות מרכזיים בתחתית ה-Hero */
+.hero-features-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  padding-top: 36px;
+}
+
+.feature-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  text-align: right;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.feature-box:hover {
+  background-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-2px);
+}
+
+.feature-box h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.feature-box p {
+  font-size: 12.5px;
+  color: #F0F8FD;
+}
+
+@media (max-width: 900px) {
+  .hero-features-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 35px 14px 60px;
+  }
+  .hero-badge {
+    font-size: 11.5px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+  }
+  .hero-animation-wrapper {
+    margin-bottom: 22px;
+  }
+  .hero-animation-card {
+    border-radius: 12px;
+    aspect-ratio: 5.2 / 1;
+    box-shadow: 0 10px 25px rgba(15, 53, 84, 0.2);
+  }
+  .hero-description {
+    font-size: 15.5px;
+    margin-bottom: 26px;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+  .btn-primary-hero,
+  .btn-secondary-hero {
+    width: 100%;
+    justify-content: center;
+  }
+}

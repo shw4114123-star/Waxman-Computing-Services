@@ -1,0 +1,183 @@
+/* עיצוב מדור השירותים */
+.services-section {
+  padding: 85px 20px;
+  background-color: var(--color-brand-bg);
+}
+
+.services-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  background-color: var(--color-brand-blue);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(101, 179, 228, 0.35);
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--color-brand-dark);
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* גריד כרטיסיות */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 2px solid var(--color-border);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(101, 179, 228, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(101, 179, 228, 0.22);
+  border-color: var(--color-brand-blue);
+}
+
+.service-card.featured-card {
+  border-color: var(--color-brand-blue);
+  box-shadow: 0 8px 28px rgba(101, 179, 228, 0.18);
+}
+
+.featured-corner-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, var(--color-brand-orange) 0%, #c83d16 100%);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-bottom-right-radius: 12px;
+}
+
+.service-icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-hover) 100%);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow: 0 6px 16px rgba(101, 179, 228, 0.35);
+}
+
+.service-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-brand-dark);
+  margin-bottom: 10px;
+}
+
+.service-card-desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.service-features-list {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 18px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.check-bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--color-brand-blue-light);
+  color: var(--color-brand-blue-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn-service-action {
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 12px;
+  background-color: var(--color-brand-blue);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(101, 179, 228, 0.3);
+}
+
+.btn-service-action:hover {
+  background-color: var(--color-brand-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(101, 179, 228, 0.45);
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,350 @@
+/* עיצוב טופס כפול ומרכז שירות בצבע התכלת של הלוגו */
+.contact-section {
+  padding: 85px 20px;
+  background: linear-gradient(155deg, #65B3E4 0%, #4FA4DC 50%, #3B92CE 100%);
+  color: #ffffff;
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 55px;
+}
+
+.contact-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 10px rgba(15, 53, 84, 0.15);
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  color: #F0F8FD;
+  line-height: 1.5;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(15, 53, 84, 0.15);
+}
+
+/* פריסת 2 טורים */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* כרטיס הטופס הראשי */
+.contact-form-card {
+  background-color: #ffffff;
+  border: 2px solid #D6EBF8;
+  border-radius: 20px;
+  padding: 34px;
+  box-shadow: 0 16px 40px rgba(15, 53, 84, 0.15);
+  color: var(--color-brand-dark);
+}
+
+/* טאבים */
+.contact-tabs-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 14px;
+  background-color: #F0F8FD;
+  border: 1.5px solid var(--color-border);
+  margin-bottom: 28px;
+}
+
+.tab-btn {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 800;
+  background: transparent;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background-color: var(--color-brand-blue);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(101, 179, 228, 0.35);
+}
+
+/* שדות טופס */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-brand-dark);
+}
+
+.required-star {
+  color: var(--color-brand-orange);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: #F8FCFE;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-brand-dark);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-brand-blue);
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(101, 179, 228, 0.25);
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.btn-form-submit {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-brand-orange) 0%, #c83d16 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(233, 84, 45, 0.4);
+  transition: all 0.2s ease;
+  margin-top: 10px;
+}
+
+.btn-form-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--color-brand-orange-hover) 0%, #b8330e 100%);
+  transform: translateY(-1px);
+}
+
+.btn-form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* קופסאות הצלחה */
+.success-card-feedback {
+  background-color: #F0F8FD;
+  border: 2px solid var(--color-brand-blue);
+  border-radius: 16px;
+  padding: 34px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--color-brand-dark);
+}
+
+.ticket-number-display-box {
+  background-color: #ffffff;
+  border: 2px solid var(--color-brand-blue);
+  border-radius: 14px;
+  padding: 16px 24px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 16px rgba(101, 179, 228, 0.15);
+}
+
+.ticket-label-small {
+  font-size: 12px;
+  color: var(--color-brand-blue-deep);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.ticket-num-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ticket-number-value {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--color-brand-blue-deep);
+  letter-spacing: 2px;
+}
+
+.btn-copy-ticket {
+  background-color: var(--color-brand-blue-light);
+  color: var(--color-brand-blue-deep);
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-copy-ticket:hover {
+  background-color: var(--color-brand-blue);
+  color: #ffffff;
+}
+
+/* טור שמאל: כרטיס פרטי קשר */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info-card {
+  background-color: #ffffff;
+  border: 2px solid #D6EBF8;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 16px 40px rgba(15, 53, 84, 0.12);
+  color: var(--color-brand-dark);
+}
+
+.contact-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-icon-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-hover) 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(101, 179, 228, 0.35);
+}
+
+.direct-phone-box {
+  background-color: var(--color-brand-blue-light);
+  border: 1.5px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.direct-phone-num {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-brand-blue-deep);
+  transition: color 0.2s ease;
+  display: block;
+  margin-top: 4px;
+}
+
+.direct-phone-num:hover {
+  color: var(--color-brand-orange);
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 13.5px;
+  color: #334155;
+}
+
+.detail-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.sla-card {
+  background-color: #ffffff;
+  border: 2px solid #D6EBF8;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 53, 84, 0.08);
+  color: var(--color-brand-dark);
+}
+
+.sla-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1984ef;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.sla-list {
+  list-style: disc;
+  padding-right: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #3674b1;
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
