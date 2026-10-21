@@ -63,7 +63,7 @@ export default function Footer() {
               <div style={{ marginTop: '8px', color: '#cbd5e1' }}>
                 <div style={{ fontWeight: 700, color: '#ffffff' }}>שעות פעילות:</div>
                 <div>ימים א' - ה': 09:00 - 17:00</div>
-                <div>ימי שישי וערבי חג: המשרד סגור תשאירו פנייה במייל או בוואצאפ</div>
+                <div>ימי שישי וערבי חג: המשרד סגור נא השאירו פנייה במייל או בוואצאפ</div>
               </div>
             </div>
           </div>

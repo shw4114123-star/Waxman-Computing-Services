@@ -219,7 +219,7 @@ export default function ContactAndTicket({
                           type="text"
                           value={leadName}
                           onChange={(e) => setLeadName(e.target.value)}
-                          placeholder="ישראל ישראלי"
+                          placeholder="שם מלא"
                           required
                           className="form-input"
                         />
@@ -258,7 +258,7 @@ export default function ContactAndTicket({
                           type="number"
                           value={workstationsCount}
                           onChange={(e) => setWorkstationsCount(e.target.value)}
-                          placeholder="למשל: 8"
+                          placeholder="0"
                           className="form-input"
                         />
                       </div>
@@ -270,7 +270,7 @@ export default function ContactAndTicket({
                         type="text"
                         value={interestedIn}
                         onChange={(e) => setInterestedIn(e.target.value)}
-                        placeholder="למשל: הקמת תשתית למשרד חדש, חבילת מחשבים..."
+                        placeholder="תיאור המוצר המבוקש"
                         className="form-input"
                       />
                     </div>
@@ -435,7 +435,7 @@ export default function ContactAndTicket({
                         rows={4}
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
-                        placeholder="תאר את התקלה (למשל: המחשב הנייד לא עולה, רשת המשרד מנותקת, נדרשת התחברות מרחוק...)"
+                        placeholder="תאר את התקלה..."
                         required
                         className="form-textarea"
                       />
@@ -491,12 +491,6 @@ export default function ContactAndTicket({
                 <a href="tel:099631330" className="direct-phone-num" dir="ltr">
                   09-9631330
                 </a>
-                {/* <div style={{ fontSize: '13px', marginTop: '8px', color: 'var(--color-brand-dark)', fontWeight: 700 }}>
-                  נייד ישיר (מנדי וקסמן - מנכ"ל):{' '}
-                  <a href="tel:0533104124" style={{ color: 'var(--color-brand-orange)', textDecoration: 'underline' }} dir="ltr">
-                    053-310-4124
-                  </a>
-                </div> */}
               </div>
 
               <div className="contact-details-list">
@@ -508,7 +502,7 @@ export default function ContactAndTicket({
                 </div>
                 <div className="detail-line">
                   <Clock size={18} color="var(--color-brand-blue)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                  <span>א' - ה': 09:00 - 17:00 (תמיכת חירום 24/7 ללקוחות ריטיינר)</span>
+                  <span>א' - ה': 09:00 - 17:00</span>
                 </div>
                 <div className="detail-line">
                   <Mail size={18} color="var(--color-brand-blue)" style={{ flexShrink: 0, marginTop: '2px' }} />
