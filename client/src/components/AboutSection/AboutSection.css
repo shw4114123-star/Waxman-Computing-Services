@@ -1,0 +1,429 @@
+/* מדור אודות וקסמן שירותי מיחשוב */
+.about-section {
+  padding: 85px 20px 95px;
+  background-color: var(--color-brand-bg);
+  position: relative;
+}
+
+.about-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* כותרת החלק הראשית */
+.about-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 50px;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-brand-dark);
+  font-size: 13.5px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(101, 179, 228, 0.15);
+}
+
+.about-main-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--color-brand-dark);
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.about-subtitle {
+  font-size: 17.5px;
+  color: var(--color-brand-blue-deep);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* כרטיס סיפור המשרד */
+.about-story-card {
+  background-color: #ffffff;
+  border: 2px solid var(--color-border);
+  border-radius: 24px;
+  padding: 44px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 12px 35px rgba(15, 53, 84, 0.07);
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-content-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-kicker {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--color-brand-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.story-headline {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-brand-dark);
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.story-paragraph {
+  font-size: 15.5px;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.story-paragraph strong {
+  color: var(--color-brand-dark);
+}
+
+.story-highlights-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: var(--color-brand-blue-light);
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
+/* טור המותג הצדדי */
+.story-brand-side {
+  display: flex;
+  justify-content: center;
+}
+
+.brand-profile-box {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1.5px solid var(--color-border);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(101, 179, 228, 0.12);
+}
+
+.brand-logo-frame {
+  margin-bottom: 18px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(15, 53, 84, 0.08);
+  background-color: #ffffff;
+  padding: 6px 10px;
+}
+
+.brand-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.brand-lead-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--color-brand-dark);
+  margin-bottom: 8px;
+}
+
+.brand-lead-quote {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.55;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.brand-contact-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-brand-call {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  background-color: var(--color-brand-dark);
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.btn-brand-call:hover {
+  background-color: var(--color-brand-blue-deep);
+  transform: translateY(-1px);
+}
+
+.btn-brand-ticket {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  background-color: var(--color-brand-orange);
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.btn-brand-ticket:hover {
+  background-color: var(--color-brand-orange-hover);
+  transform: translateY(-1px);
+}
+
+/* מה אנחנו עושים (One Stop Shop) */
+.about-services-wrap {
+  margin-bottom: 60px;
+}
+
+.about-sub-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.about-sub-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  background-color: var(--color-brand-blue-light);
+  color: var(--color-brand-blue-deep);
+  font-size: 12.5px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.about-sub-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-brand-dark);
+  margin-bottom: 10px;
+}
+
+.about-sub-desc {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.about-pillars-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.about-pillar-card {
+  flex: 1 1 340px;
+  max-width: 380px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 26px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(101, 179, 228, 0.06);
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-brand-blue);
+  box-shadow: 0 12px 28px rgba(101, 179, 228, 0.18);
+}
+
+.pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-deep) 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 14px rgba(101, 179, 228, 0.35);
+}
+
+.pillar-title {
+  font-size: 17.5px;
+  font-weight: 800;
+  color: var(--color-brand-dark);
+  margin-bottom: 8px;
+}
+
+.pillar-desc {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.65;
+}
+
+/* העקרונות שמובילים אותנו */
+.about-values-section {
+  background-color: #ffffff;
+  border: 2px solid var(--color-border);
+  border-radius: 24px;
+  padding: 44px;
+  box-shadow: 0 10px 30px rgba(15, 53, 84, 0.05);
+}
+
+.values-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 36px;
+}
+
+.values-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--color-brand-dark);
+  margin-bottom: 8px;
+}
+
+.values-subtitle {
+  font-size: 14.5px;
+  color: #64748b;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.value-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 22px;
+  background-color: var(--color-brand-blue-light);
+  border: 1px solid rgba(101, 179, 228, 0.35);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.value-item-card:hover {
+  background-color: #e2f1fc;
+  border-color: var(--color-brand-blue);
+  transform: translateY(-2px);
+}
+
+.value-check-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.value-card-title {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: var(--color-brand-dark);
+  margin-bottom: 6px;
+}
+
+.value-card-desc {
+  font-size: 13.5px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* רספונסיביות */
+@media (max-width: 1024px) {
+  .about-story-card {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-brand-side {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 55px 14px 65px;
+  }
+
+  .about-main-title {
+    font-size: 27px;
+  }
+
+  .about-subtitle {
+    font-size: 15px;
+  }
+
+  .story-headline {
+    font-size: 21px;
+  }
+
+  .about-story-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-section {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .values-title {
+    font-size: 21px;
+  }
+}

@@ -19,7 +19,7 @@ export default function Navbar({ onOpenTicket }: NavbarProps) {
   return (
     <header className="navbar-header">
       <div className="navbar-container">
-        
+
         {/* לוגו ומיתוג מקורי */}
         <a href="#" className="navbar-brand">
           <img
@@ -29,7 +29,7 @@ export default function Navbar({ onOpenTicket }: NavbarProps) {
           />
           <div className="brand-text">
             <span className="brand-name">
-              וקסמן <span className="brand-highlight">מיחשוב</span>
+              <span className="brand-highlight">וקסמן שירותי מיחשוב</span>
             </span>
             <span className="brand-tagline">
               לעסקים שחושבים על עצמם

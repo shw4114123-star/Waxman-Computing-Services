@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import AboutSection from './components/AboutSection/AboutSection';
 import ServicesSection from './components/ServicesSection/ServicesSection';
 import QuoteCalculator from './components/QuoteCalculator/QuoteCalculator';
 import EquipmentCatalog from './components/EquipmentCatalog/EquipmentCatalog';
@@ -63,6 +64,8 @@ export default function App() {
           onOpenTicket={handleOpenTicket}
           onOpenCalculator={handleOpenCalculator}
         />
+
+        <AboutSection onOpenTicket={handleOpenTicket} />
 
         <ServicesSection
           services={services}
