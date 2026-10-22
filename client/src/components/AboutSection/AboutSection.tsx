@@ -1,7 +1,5 @@
 import {
   Network,
-  Wrench,
-  Server,
   ShieldCheck,
   Video,
   CheckCircle2,
@@ -9,7 +7,8 @@ import {
   Phone,
   ArrowLeft,
   Sparkles,
-  MapPin
+  MapPin,
+  Laptop
 } from '../common/Icons';
 import './AboutSection.css';
 
@@ -18,39 +17,74 @@ interface AboutSectionProps {
 }
 
 export default function AboutSection({ onOpenTicket }: AboutSectionProps) {
-  const pillars = [
+  // קהלי יעד ומצבי לקוח (כולל לקוח יחיד)
+  const audiences = [
     {
       icon: <Network size={26} />,
-      title: 'הקמת תשתיות תקשורת ורשתות',
+      badge: 'הקמה מאפס',
+      title: 'משרדים ועסקים חדשים / מעבר משרד',
       description:
-        'תכנון וחיווט כבילה מובנית (CAT6/CAT7), סידור והקמת ארונות תקשורת מקצועיים, ופריסת רשתות Wi-Fi ארגוניות יציבות ורחבות טווח.',
+        'תכנון ופריסת כל מעטפת המחשוב והתקשורת מאפס – כבילה מובנית, ארון תקשורת, נתבים, עמדות עבודה ו-Wi-Fi ארגוני, לכניסה חלקה ושקטה לפעילות.',
     },
     {
-      icon: <Wrench size={26} />,
-      title: 'שירותי IT מנוהלים ו-Helpdesk',
+      icon: <Zap size={26} />,
+      badge: 'ריטיינר IT שוטף',
+      title: 'עסקים קיימים וחברות בצמיחה',
       description:
-        'תמיכה שוטפת מרחוק (מרכז שירות מהיר) וטכנאי שטח עד בית העסק, כולל מעבדת תיקונים מתקדמת למחשבים ניידים ונייחים.',
-    },
-    {
-      icon: <Server size={26} />,
-      title: 'אספקת חומרה וציוד היקפי',
-      description:
-        'שרתים עסקיים, עמדות עבודה ומחשבים ניידים מהמותגים המובילים בעולם (Dell, Lenovo, HP), מסכים, מדפסות ומערכות אל-פסק (UPS).',
+        'הסכמי שירות IT מנוהלים ומותאמים אישית, שדרוג שרתים ועמדות, תמיכת Helpdesk מהירה מרחוק וטכנאי שטח מוסמך באתר הלקוח.',
     },
     {
       icon: <ShieldCheck size={26} />,
-      title: 'אבטחת מידע, סייבר וגיבוי ענן',
+      badge: 'אבטחה והגנת כופר',
+      title: 'משרדים עם מידע רגיש ודרישות אבטחה',
       description:
-        'הגנה רב-שכבתית מפני מתקפות כופר (Ransomware), חומות אש מנוהלות, גיבוי ענן מוצפן ואוטומטי, וניהול סביבות Microsoft 365.',
+        'עורכי דין, רואי חשבון, מרפאות ופיננסים: גיבוי ענן מוצפן ואוטומטי, הגנה רב-שכבתית מפני מתקפות כופר (Ransomware) וחומות אש מנוהלות.',
     },
     {
       icon: <Video size={26} />,
-      title: 'מערכות אבטחה ומתח נמוך',
+      badge: 'מתח נמוך ואבטחה',
+      title: 'מתחמים, חנויות ומבנים מסחריים',
       description:
-        'מצלמות אבטחה חכמות באיכות 4K עם צפייה מרחוק, מערכות הקלטה NVR, קודנים ובקרת כניסה מתקדמת למשרדים ולעסקים.',
+        'מערכי מצלמות IP ברזולוציית 4K עם צפייה ישירה מהנייד, קודנים, בקרת כניסה מאובטחת ורשתות Wi-Fi מופרדות לעובדים ולאורחים.',
+    },
+    {
+      icon: <Laptop size={26} />,
+      badge: 'מעבדה ותמיכה אישית',
+      title: 'לקוחות פרטיים, עצמאיים ומשרד ביתי (לקוח יחיד)',
+      description:
+        'מעבדת שירות מתקדמת לתיקון מחשבים ניידים ונייחים, שדרוגי חומרה ו-SSD מהירים, ניקוי וירוסים, ותמיכה מרחוק מהירה למשתמש הבודד.',
     },
   ];
 
+  // שיטת העבודה של וקסמן (4 שלבים)
+  const workflowSteps = [
+    {
+      number: '01',
+      title: 'אפיון ומיפוי צרכים בשטח',
+      description:
+        'הגעה לאתר העסק או אפיון מעמיק של התקלה, סקירת המערכות הקיימות והבנת הצרכים האמיתיים שלך ללא הנחות.',
+    },
+    {
+      number: '02',
+      title: 'תכנון הנדסי והצעת מחיר שקופה',
+      description:
+        'בניית מפרט טכני מדויק שמתאים בול להיקף הפעילות, ללא דחיפת ציוד עודף, ובמחיר ברור וידוע מראש.',
+    },
+    {
+      number: '03',
+      title: 'הקמה, חיווט והטמעה מקצועית',
+      description:
+        'עבודה נקייה ומדויקת לפי התקנים המחמירים ביותר (CAT7, סיבים, ארונות תקשורת מדוגמים) במינימום הפרעה לשגרה.',
+    },
+    {
+      number: '04',
+      title: 'ליווי שוטף, ניטור ו-SLA מהיר',
+      description:
+        'מוקד שירות זמין, תמיכה מרחוק וטכנאי שטח מהירים, ניטור גיבויים ורציפות עסקית מלאה כדי שהעבודה לא תעצור לעולם.',
+    },
+  ];
+
+  // עקרונות ואמנת השירות
   const values = [
     {
       title: 'רציפות עסקית מעל הכל',
@@ -97,12 +131,12 @@ export default function AboutSection({ onOpenTicket }: AboutSectionProps) {
             <p className="story-paragraph">
               <strong>וקסמן שירותי מיחשוב ותשתיות</strong>, בהובלת מנדי וקסמן ובסיס הפעילות המרכזי בנתניה,
               היא חברה מובילה המספקת מעטפת פתרונות IT, תשתיות תקשורת ומערכות מחשוב מתקדמות
-              לעסקים, חברות, משרדים וארגונים באזור השרון, המרכז וגוש דן.
+              לעסקים, חברות, משרדים ולקוחות פרטיים בכל איזורי הארץ.
             </p>
 
             <p className="story-paragraph">
               אנו מאמינים שמערך מחשוב אינו רק "חומרה וכבלים" – הוא עורק החיים והמנוע העסקי שלך.
-              כשהמחשוב עובד חלק, מהיר וללא הפרעות, העסק שלך פנוי להתמקד בצמיחה, במכירות
+              כשהמחשוב עובד חלק, מהיר וללא הפרעות, אתה פנוי להתמקד בצמיחה, במכירות
               ובשירות לקוחות, ללא תקלות משביתות והפתעות מיותרות.
             </p>
 
@@ -114,7 +148,7 @@ export default function AboutSection({ onOpenTicket }: AboutSectionProps) {
               </div>
               <div className="highlight-pill">
                 <MapPin size={16} color="var(--color-brand-blue-deep)" />
-                <span>פריסה בשרון, במרכז ובגוש דן</span>
+                <span>פריסה בכל רחבי הארץ</span>
               </div>
               <div className="highlight-pill">
                 <ShieldCheck size={16} color="#10b981" />
@@ -128,7 +162,7 @@ export default function AboutSection({ onOpenTicket }: AboutSectionProps) {
             <div className="brand-profile-box">
               <div className="brand-logo-frame">
                 <img
-                  src="/logo-with-address.jpeg"
+                  src="/logo-banner.jpeg"
                   alt="וקסמן שירותי מיחשוב - מנדי וקסמן מנכ''ל - החוזה מלובלין 7 נתניה"
                   className="brand-card-img"
                 />
@@ -158,33 +192,57 @@ export default function AboutSection({ onOpenTicket }: AboutSectionProps) {
           </div>
         </div>
 
-        {/* חלק 2: מה אנחנו עושים (One-Stop-Shop) */}
-        <div className="about-services-wrap">
+        {/* חלק 2: למי אנחנו מתאימים? (קהלי יעד כולל לקוח יחיד) */}
+        <div className="about-audiences-wrap">
           <div className="about-sub-header">
-            <span className="about-sub-badge">One-Stop-Shop טכנולוגי</span>
-            <h3 className="about-sub-title">כל פתרונות המחשוב והתקשורת תחת קורת גג אחת</h3>
+            <span className="about-sub-badge">התאמה מלאה לכל צורך</span>
+            <h3 className="about-sub-title">הפתרונות שלנו מותאמים בדיוק לשלב שבו אתה נמצא</h3>
             <p className="about-sub-desc">
-              במקום להתמודד עם מספר ספקים שונים שמעבירים אחריות מאחד לשני, אצלנו תקבלו מענה מלא, הרמוני ואחראי:
+              בין אם אתה עסק בצמיחה, משרד חדש בהקמה או לקוח פרטי הזקוק למעבדה אמינה – אנחנו הכתובת המקצועית עבורך:
             </p>
           </div>
 
-          <div className="about-pillars-grid">
-            {pillars.map((pillar, idx) => (
-              <div key={idx} className="about-pillar-card">
-                <div className="pillar-icon-box">{pillar.icon}</div>
-                <h4 className="pillar-title">{pillar.title}</h4>
-                <p className="pillar-desc">{pillar.description}</p>
+          <div className="about-audiences-grid">
+            {audiences.map((item, idx) => (
+              <div key={idx} className="about-audience-card">
+                <div className="audience-card-top">
+                  <div className="audience-icon-box">{item.icon}</div>
+                  <span className="audience-type-badge">{item.badge}</span>
+                </div>
+                <h4 className="audience-title">{item.title}</h4>
+                <p className="audience-desc">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* חלק 3: העקרונות שמובילים אותנו */}
+        {/* חלק 3: שיטת העבודה של וקסמן (4 שלבים) */}
+        <div className="about-workflow-wrap">
+          <div className="about-sub-header">
+            <span className="about-sub-badge">שקט נפשי מ-א' ועד ת'</span>
+            <h3 className="about-sub-title">שיטת העבודה של וקסמן – 4 שלבים לשקט טכנולוגי</h3>
+            <p className="about-sub-desc">
+              איך זה עובד בפועל? תהליך מסודר, שקוף ומדויק שמבטיח עבודה חלקה ללא הפתעות:
+            </p>
+          </div>
+
+          <div className="about-workflow-grid">
+            {workflowSteps.map((step, idx) => (
+              <div key={idx} className="workflow-step-card">
+                <div className="step-number-tag">{step.number}</div>
+                <h4 className="step-title">{step.title}</h4>
+                <p className="step-desc">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* חלק 4: העקרונות שמובילים אותנו */}
         <div className="about-values-section">
           <div className="values-header">
             <h3 className="values-title">העקרונות שמובילים אותנו בכל פרויקט וקריאה</h3>
             <p className="values-subtitle">
-              אמנת השירות והמחויבות שלנו לכל עסק ומשרד שאנו מלווים
+              אמנת השירות והמחויבות שלנו לכל עסק, משרד ולקוח שאנו מלווים
             </p>
           </div>
 
